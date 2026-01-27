@@ -1,0 +1,1050 @@
+15:50:45.826 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:50:47.791 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:50:48.618 [main] DEBUG com.intuit.karate - request:
+1 > POST https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-ig9trzj9c
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 80
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+{"firstName":"Archana","lastName":"Kumari","email":"Archana.Kumari@example.com"}
+
+15:50:49.950 [main] DEBUG com.intuit.karate - response time in milliseconds: 1322
+1 < 201
+1 < Date: Tue, 27 Jan 2026 15:50:52 GMT
+1 < Content-Type: application/json
+1 < Content-Length: 333
+1 < Connection: keep-alive
+1 < Location: /v1/users/user-37001823
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 99
+1 < X-RateLimit-Reset: 1769529111
+1 < X-Request-Id: swagger-ig9trzj9c
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2B%2BXgVKroSS%2Brjr5LCfYzTPIsy1bFOiOQYJdQyz6GmRYWBsumZwxwvItofhRaqE5Xdjq9I4iGDQjq55CJiyVwU5ohcNBeZafzKnWcQ8luIWnp0I4147fJOGxLUyO51Qa7ytmNh2zeootZalZwYoe8RM1D"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c49687b6b637783-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"id":"user-37001823","email":"Archana.Kumari@example.com","phone":null,"firstName":"Archana","lastName":"Kumari","kycStatus":"pending","createdAt":"2026-01-27T15:50:51.976Z","updatedAt":"2026-01-27T15:50:51.976Z"},"meta":{"requestId":"swagger-ig9trzj9c","timestamp":"2026-01-27T15:50:52.335Z","version":"v1"}}
+
+15:50:50.012 [main] DEBUG com.intuit.karate - request:
+2 > GET https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-37001823
+2 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:50:50.437 [main] DEBUG com.intuit.karate - response time in milliseconds: 422
+2 < 401
+2 < Date: Tue, 27 Jan 2026 15:50:52 GMT
+2 < Content-Type: application/json
+2 < Content-Length: 258
+2 < Connection: keep-alive
+2 < Access-Control-Allow-Origin: *
+2 < WWW-Authenticate: Bearer realm="billpay-api", Basic realm="billpay-api"
+2 < Access-Control-Allow-Credentials: true
+2 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+2 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+2 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+2 < Access-Control-Max-Age: 86400
+2 < X-Request-Id: 344969c2-089e-4b37-a08a-37fc621387e3
+2 < Vary: accept-encoding
+2 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2FA84ZI3tKQiQKakTnB5JmY2ZVH7Gqwpq8SrDOKgp%2Fuwds5zmoaxhkNqpTRi47ZOClcrVdULYV7RyY3XyS%2BECvwDuvxnVT93YYUeySp2toArRAUwe3xXY2%2BAERI9NrTr5Wo9rUMhCHl%2B52PNz3CcgQ8WO"}]}
+2 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 9c496881f95d9529-LHR
+2 < alt-svc: h3=":443"; ma=86400
+{"success":false,"error":{"code":"MISSING_AUTHENTICATION","message":"Authentication required. Provide API Key, Bearer token, Basic auth credentials, or session cookie.","traceId":"344969c2-089e-4b37-a08a-37fc621387e3","timestamp":"2026-01-27T15:50:52.848Z"}}
+
+15:50:50.455 [main] ERROR com.intuit.karate - classpath:examples/users/createApi.feature:22
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 422, url: https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-37001823, response: 
+{"success":false,"error":{"code":"MISSING_AUTHENTICATION","message":"Authentication required. Provide API Key, Bearer token, Basic auth credentials, or session cookie.","traceId":"344969c2-089e-4b37-a08a-37fc621387e3","timestamp":"2026-01-27T15:50:52.848Z"}}
+classpath:examples/users/createApi.feature:22
+15:50:51.854 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:50:51.866 [main] DEBUG com.intuit.karate - request:
+1 > GET https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users?limit=10&page=1
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-6qsdawl2i
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:50:52.653 [main] DEBUG com.intuit.karate - response time in milliseconds: 781
+1 < 200
+1 < Date: Tue, 27 Jan 2026 15:50:55 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 97
+1 < X-RateLimit-Reset: 1769529114
+1 < X-Request-Id: swagger-6qsdawl2i
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=g69E8W%2BaakaPNKrneuVtExljCXEqLAUYCVimQyw3MvzGicb87Yww636Kz2esKFbF4naBU%2B2jYrD3lo63qaV5h9LjYZBlHQyowX0qbYDFLu4xCXcFMjI2Y0qGBPM%2BsWt3MsP9HvbRHgRZrUBVYPpMVyFh"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c49688d98baedbd-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":[{"id":"user-37001823","email":"Archana.Kumari@example.com","phone":null,"firstName":"Archana","lastName":"Kumari","kycStatus":"pending","createdAt":"2026-01-27T15:50:51.976Z","updatedAt":"2026-01-27T15:50:51.976Z"},{"id":"user-d54947c3","email":"Andy.wilson@example.com","phone":null,"firstName":"Andy","lastName":"wilson","kycStatus":"pending","createdAt":"2026-01-26T20:42:00.202Z","updatedAt":"2026-01-26T20:42:00.202Z"},{"id":"user-365d4dbd","email":"Peter.wilson@example.com","phone":null,"firstName":"Peter","lastName":"wilson","kycStatus":"pending","createdAt":"2026-01-26T20:37:36.430Z","updatedAt":"2026-01-26T20:37:36.430Z"},{"id":"user-045cf70d","email":"David.wilson@example.com","phone":null,"firstName":"David","lastName":"wilson","kycStatus":"pending","createdAt":"2026-01-26T20:33:28.350Z","updatedAt":"2026-01-26T20:33:28.350Z"},{"id":"user-574e087d","email":"farhan.akhtar@example.com","phone":null,"firstName":"farhan","lastName":"akhtar","kycStatus":"pending","createdAt":"2026-01-26T20:16:33.857Z","updatedAt":"2026-01-26T20:16:33.857Z"},{"id":"user-2ac62608","email":"Vikas.Kumar@example.com","phone":null,"firstName":"Vikas","lastName":"Kumar","kycStatus":"pending","createdAt":"2026-01-26T20:13:04.198Z","updatedAt":"2026-01-26T20:13:04.198Z"},{"id":"user-bd45fa25","email":"newuser@example.com","phone":null,"firstName":"john","lastName":"ibrahim","kycStatus":"pending","createdAt":"2026-01-26T19:10:20.832Z","updatedAt":"2026-01-26T19:10:20.832Z"},{"id":"user-419a187d","email":"biswasjidone@example.com","phone":null,"firstName":"Biswa","lastName":"Ji","kycStatus":"pending","createdAt":"2026-01-26T15:48:29.680Z","updatedAt":"2026-01-26T15:48:29.680Z"},{"id":"user-52221335","email":"biswas@example.com","phone":null,"firstName":"Biswa","lastName":"Ji","kycStatus":"pending","createdAt":"2026-01-26T12:05:13.354Z","updatedAt":"2026-01-26T12:05:13.354Z"},{"id":"user-8c7ca58f","email":"updated_FOKgjDve75mV@test.com","phone":"+912883932355","firstName":"Ramona","lastName":"Botsford","kycStatus":"verified","createdAt":"2026-01-25T14:48:59.151Z","updatedAt":"2026-01-25T14:49:18.472Z"}],"meta":{"requestId":"swagger-6qsdawl2i","timestamp":"2026-01-27T15:50:55.054Z","version":"v1","pagination":{"page":1,"limit":10,"total":135,"totalPages":14,"hasNext":true,"hasPrev":false,"offset":0}}}
+
+15:50:52.840 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:50:52.847 [main] DEBUG com.intuit.karate - request:
+1 > GET https://jsonplaceholder.typicode.com/https:/reqres.in/api/users%3Fpage=2
+1 > Host: jsonplaceholder.typicode.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:50:53.220 [main] DEBUG com.intuit.karate - response time in milliseconds: 370
+1 < 404
+1 < Date: Tue, 27 Jan 2026 15:50:55 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < access-control-allow-credentials: true
+1 < Cache-Control: max-age=43200
+1 < etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
+1 < expires: -1
+1 < nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+1 < pragma: no-cache
+1 < report-to: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=KzM%2FOl5vBR4ezaMGByrYBwjKyCQHqsiiQMOCt5rqixY%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1769529055"}],"max_age":3600}
+1 < reporting-endpoints: heroku-nel="https://nel.heroku.com/reports?s=KzM%2FOl5vBR4ezaMGByrYBwjKyCQHqsiiQMOCt5rqixY%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1769529055"
+1 < Server: cloudflare
+1 < vary: Origin, Accept-Encoding
+1 < via: 2.0 heroku-router
+1 < x-content-type-options: nosniff
+1 < x-powered-by: Express
+1 < x-ratelimit-limit: 1000
+1 < x-ratelimit-remaining: 999
+1 < x-ratelimit-reset: 1769529088
+1 < cf-cache-status: EXPIRED
+1 < Server-Timing: cfCacheStatus;desc="EXPIRED"
+1 < Server-Timing: cfEdge;dur=18,cfOrigin;dur=235
+1 < CF-RAY: 9c496893df58cd18-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{}
+
+15:50:53.224 [main] ERROR com.intuit.karate - classpath:examples/users/users.feature:10
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 370, url: https://jsonplaceholder.typicode.com/https:/reqres.in/api/users%3Fpage=2, response: 
+{}
+classpath:examples/users/users.feature:10
+15:50:53.239 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:50:53.244 [main] DEBUG com.intuit.karate - request:
+1 > POST https://jsonplaceholder.typicode.com/users
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 160
+1 > Host: jsonplaceholder.typicode.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Test User","username":"testuser","email":"test@user.com","address":{"street":"Has No Name","suite":"Apt. 123","city":"Electri","zipcode":"54321-6789"}}
+
+15:50:53.534 [main] DEBUG com.intuit.karate - response time in milliseconds: 285
+1 < 201
+1 < Date: Tue, 27 Jan 2026 15:50:55 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 216
+1 < Connection: keep-alive
+1 < access-control-allow-credentials: true
+1 < access-control-expose-headers: Location
+1 < Cache-Control: no-cache
+1 < etag: W/"d8-pYV7+YuMGP2hxHPU9ARrf97ifDA"
+1 < expires: -1
+1 < location: https://jsonplaceholder.typicode.com/users/11
+1 < nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+1 < pragma: no-cache
+1 < report-to: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=KzM%2FOl5vBR4ezaMGByrYBwjKyCQHqsiiQMOCt5rqixY%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1769529055"}],"max_age":3600}
+1 < reporting-endpoints: heroku-nel="https://nel.heroku.com/reports?s=KzM%2FOl5vBR4ezaMGByrYBwjKyCQHqsiiQMOCt5rqixY%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1769529055"
+1 < Server: cloudflare
+1 < vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+1 < via: 2.0 heroku-router
+1 < x-content-type-options: nosniff
+1 < x-powered-by: Express
+1 < x-ratelimit-limit: 1000
+1 < x-ratelimit-remaining: 998
+1 < x-ratelimit-reset: 1769529088
+1 < cf-cache-status: DYNAMIC
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=6,cfOrigin;dur=238
+1 < CF-RAY: 9c4968961a15a712-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{
+  "name": "Test User",
+  "username": "testuser",
+  "email": "test@user.com",
+  "address": {
+    "street": "Has No Name",
+    "suite": "Apt. 123",
+    "city": "Electri",
+    "zipcode": "54321-6789"
+  },
+  "id": 11
+}
+
+15:50:53.548 [main] INFO  com.intuit.karate - [print] created id is:  11 
+15:51:44.383 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:examples/users/createApi.feature
+15:51:44.994 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:51:47.782 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:51:48.684 [main] DEBUG com.intuit.karate - request:
+1 > POST https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-ig9trzj9c
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 80
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+{"firstName":"Archana","lastName":"Kumari","email":"Archana.Kumari@example.com"}
+
+15:51:49.837 [main] DEBUG com.intuit.karate - response time in milliseconds: 1145
+1 < 409
+1 < Date: Tue, 27 Jan 2026 15:51:52 GMT
+1 < Content-Type: application/json
+1 < Content-Length: 164
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 99
+1 < X-RateLimit-Reset: 1769529171
+1 < X-Request-Id: swagger-ig9trzj9c
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2BXnDPSibri8CqRnk1o5UWnkHXVQm4CLaq1hb1gugshv5aVDy16AQTx8bf7kZMdX9lgaCkqi8YAquCNAZ1UUDA5MpqgiQCcUNsMVVfpYuFAddXqq92Rh9BdbNtYQPwI1H3XkYSTJOlFPDhTiCxxzVuzYh"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4969f3989960ef-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":false,"error":{"code":"CONFLICT","message":"A user with this email already exists","traceId":"swagger-ig9trzj9c","timestamp":"2026-01-27T15:51:52.153Z"}}
+
+15:51:49.862 [main] ERROR com.intuit.karate - classpath:examples/users/createApi.feature:13
+Then status 201
+status code was: 409, expected: 201, response time in milliseconds: 1145, url: https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users, response: 
+{"success":false,"error":{"code":"CONFLICT","message":"A user with this email already exists","traceId":"swagger-ig9trzj9c","timestamp":"2026-01-27T15:51:52.153Z"}}
+classpath:examples/users/createApi.feature:13
+17:05:58.091 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:examples/users/createApi.feature
+17:05:58.641 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+17:06:01.355 [main] INFO  com.intuit.karate - karate.env system property was: null 
+17:06:02.721 [main] DEBUG com.intuit.karate - request:
+1 > POST https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-ig9trzj9c
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 80
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+{"firstName":"Archana","lastName":"Kumari","email":"Archana.Kumari@example.com"}
+
+17:06:04.138 [main] DEBUG com.intuit.karate - response time in milliseconds: 1404
+1 < 409
+1 < Date: Tue, 27 Jan 2026 17:06:06 GMT
+1 < Content-Type: application/json
+1 < Content-Length: 164
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 99
+1 < X-RateLimit-Reset: 1769533625
+1 < X-Request-Id: swagger-ig9trzj9c
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=k8b6FKFVtezYdvCDariRMvhjE0ASnWcHjXm%2F2lA22jEzIo1x7PJtBzBNZAx0CM0LcgjOlJ4duD%2B6Vk7jALD%2FtjjWoKFBfvNo%2F2A58U7S6yJFA9teaWrj3jTcTRmwa4aLVwoitsl4gZ7Jig6MEJHwObjz"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c49d6b02a089430-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":false,"error":{"code":"CONFLICT","message":"A user with this email already exists","traceId":"swagger-ig9trzj9c","timestamp":"2026-01-27T17:06:06.331Z"}}
+
+17:06:04.268 [main] ERROR com.intuit.karate - classpath:examples/users/createApi.feature:11
+Then status 201
+status code was: 409, expected: 201, response time in milliseconds: 1404, url: https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users, response: 
+{"success":false,"error":{"code":"CONFLICT","message":"A user with this email already exists","traceId":"swagger-ig9trzj9c","timestamp":"2026-01-27T17:06:06.331Z"}}
+classpath:examples/users/createApi.feature:11
+17:06:47.751 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:examples/users/createApi.feature
+17:06:48.208 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+17:06:50.872 [main] INFO  com.intuit.karate - karate.env system property was: null 
+17:06:51.952 [main] DEBUG com.intuit.karate - request:
+1 > POST https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-ig9trzj9c
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 70
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+{"firstName":"Tom","lastName":"Jerry","email":"tom.jerry@example.com"}
+
+17:06:53.357 [main] DEBUG com.intuit.karate - response time in milliseconds: 1396
+1 < 201
+1 < Date: Tue, 27 Jan 2026 17:06:55 GMT
+1 < Content-Type: application/json
+1 < Content-Length: 323
+1 < Connection: keep-alive
+1 < Location: /v1/users/user-583e69e4
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 98
+1 < X-RateLimit-Reset: 1769533674
+1 < X-Request-Id: swagger-ig9trzj9c
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=F0P6eMDQs4Zerxk8zmTTPSfKSbyq3j0lW61eo%2FZXAeDU%2FQmVkeaUsh6BUdyHxcmtZ8KSoVeVB0eGt%2FvJzykURP6%2BWjQRvmQ%2FVSEubxOseez56lRwc%2FArmnB2x9yyUYnOc22%2Fo5I9ec%2Bll3MqqbbRbvyS"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c49d7e38b4245a0-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"id":"user-583e69e4","email":"tom.jerry@example.com","phone":null,"firstName":"Tom","lastName":"Jerry","kycStatus":"pending","createdAt":"2026-01-27T17:06:55.200Z","updatedAt":"2026-01-27T17:06:55.200Z"},"meta":{"requestId":"swagger-ig9trzj9c","timestamp":"2026-01-27T17:06:55.547Z","version":"v1"}}
+
+17:06:53.439 [main] DEBUG com.intuit.karate - request:
+2 > GET https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4
+2 > Accept: application/json
+2 > X-API-Key: demo-api-key-123
+2 > X-Request-Id: swagger-ig9trzj9c
+2 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+2 > Accept-Encoding: gzip,deflate
+
+
+17:06:54.043 [main] DEBUG com.intuit.karate - response time in milliseconds: 600
+2 < 200
+2 < Date: Tue, 27 Jan 2026 17:06:56 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Access-Control-Allow-Origin: *
+2 < Access-Control-Allow-Credentials: true
+2 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+2 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+2 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+2 < Access-Control-Max-Age: 86400
+2 < X-RateLimit-Limit: 100
+2 < X-RateLimit-Remaining: 97
+2 < X-RateLimit-Reset: 1769533675
+2 < X-Request-Id: swagger-ig9trzj9c
+2 < Vary: accept-encoding
+2 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=NUdM%2Fx7r6GSfhoanaobTQXytEK37I50qaUrOJou6maoYi6NFaUSqCwgQSQMpfQeOaDR2h8qxcKkNdzybDDTRfyi3qnxsENCfNJxo%2FRiKvY32xCF0K4AI0CzhN4U3Wo7ivDorXctmcJto44Snqe9TElL5"}]}
+2 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 9c49d7ea48773edb-LHR
+2 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"id":"user-583e69e4","email":"tom.jerry@example.com","phone":null,"firstName":"Tom","lastName":"Jerry","kycStatus":"pending","createdAt":"2026-01-27T17:06:55.200Z","updatedAt":"2026-01-27T17:06:55.200Z"},"meta":{"requestId":"swagger-ig9trzj9c","timestamp":"2026-01-27T17:06:56.261Z","version":"v1"}}
+
+17:37:37.463 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:examples/users/putApi.feature
+17:41:33.455 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:examples/users/putApi.feature
+17:41:33.879 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+17:41:36.099 [main] INFO  com.intuit.karate - karate.env system property was: null 
+17:41:37.004 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-xyz12345
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 78
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+{"firstName":"Micheal","lastName":"Henry","email":"micheal.henry@example.com"}
+
+17:41:38.737 [main] DEBUG com.intuit.karate - response time in milliseconds: 1727
+1 < 200
+1 < Date: Tue, 27 Jan 2026 17:41:40 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 99
+1 < X-RateLimit-Reset: 1769535759
+1 < X-Request-Id: swagger-xyz12345
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=aLrkJtQEWDcd0QTGghZRKTI29oe63kPprsj3%2FeQb2yT6%2FQEf5Ov1mH4FMUptJmv%2FTICJpqw6%2BtJ6a1Dr0A0bJ%2F0ZVJzIBVM3VJRgUT3ClF%2FQipOdbG2KH6qvqr5i%2FFPtYuJeUTnNg9jD4qrMvvWB2HCz"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a0acb68bf50f1-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"id":"user-583e69e4","email":"micheal.henry@example.com","phone":null,"firstName":"Micheal","lastName":"Henry","kycStatus":"pending","createdAt":"2026-01-27T17:06:55.200Z","updatedAt":"2026-01-27T17:41:40.578Z"},"meta":{"requestId":"swagger-xyz12345","timestamp":"2026-01-27T17:41:40.940Z","version":"v1"}}
+
+17:56:22.227 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:examples/users/putApi.feature
+17:56:22.702 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+17:56:24.867 [main] INFO  com.intuit.karate - karate.env system property was: null 
+17:56:25.767 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-xyz12345
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 74
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+{"firstName":"Micheal","lastName":"tom","email":"micheal.tom@example.com"}
+
+17:56:27.448 [main] DEBUG com.intuit.karate - response time in milliseconds: 1672
+1 < 200
+1 < Date: Tue, 27 Jan 2026 17:56:29 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 99
+1 < X-RateLimit-Reset: 1769536648
+1 < X-Request-Id: swagger-xyz12345
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=PqdFCV0TgmnIfzecIZQwMb9lIo%2FBpjgRrCBT6K3Py2o%2F8fkvsaU8ZauB7E7xsZlQmawjib82IZhYpQYilcvKIrwP7TMu23g6qhybLhM3iGAoyZizS%2BR3SoX4RN4ADgdW2QywRUzt53yBffYk2nuJwYdI"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a207e0fc49783-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"id":"user-583e69e4","email":"micheal.tom@example.com","phone":null,"firstName":"Micheal","lastName":"tom","kycStatus":"pending","createdAt":"2026-01-27T17:06:55.200Z","updatedAt":"2026-01-27T17:56:29.313Z"},"meta":{"requestId":"swagger-xyz12345","timestamp":"2026-01-27T17:56:29.662Z","version":"v1"}}
+
+17:56:27.561 [main] INFO  com.intuit.karate - karate.env system property was: null 
+17:56:27.573 [main] DEBUG com.intuit.karate - request:
+1 > GET https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-xyz12345
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+
+
+17:56:28.192 [main] DEBUG com.intuit.karate - response time in milliseconds: 616
+1 < 200
+1 < Date: Tue, 27 Jan 2026 17:56:30 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 98
+1 < X-RateLimit-Reset: 1769536649
+1 < X-Request-Id: swagger-xyz12345
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=oCb2swNuxqS8BI%2FBeuoQPYmqHNM97eXK9SfB3ME6hwnBk4Y3mmh%2B9OpvCPM9QAGtnaBMJRLCVTEK2rjpsVuH%2FdOeBjD7hcetXu9hLoNjjnXQ%2BGPuUIURiSkeOACQfitJXltACg3oeYtvFb%2FkgWFujPQ5"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a2086ddc59566-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"id":"user-583e69e4","email":"micheal.tom@example.com","phone":null,"firstName":"Micheal","lastName":"tom","kycStatus":"pending","createdAt":"2026-01-27T17:06:55.200Z","updatedAt":"2026-01-27T17:56:29.313Z"},"meta":{"requestId":"swagger-xyz12345","timestamp":"2026-01-27T17:56:30.433Z","version":"v1"}}
+
+18:03:05.946 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:examples/users/putApi.feature
+18:03:06.370 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:03:08.746 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:03:09.597 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-xyz12345
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 74
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+{"firstName":"Micheal","lastName":"tom","email":"micheal.tom@example.com"}
+
+18:03:11.292 [main] DEBUG com.intuit.karate - response time in milliseconds: 1688
+1 < 200
+1 < Date: Tue, 27 Jan 2026 18:03:13 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 99
+1 < X-RateLimit-Reset: 1769537052
+1 < X-Request-Id: swagger-xyz12345
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=O02bmxf1dz%2BjFP3DYWfTJXgAbii88IyVLFMCCq94Ep%2Fb41Q76FYP%2F0QIariji%2FTm8BFfxacDlNsgmZRvqxVNdGDuL%2Fs%2FLWl0M94vhpq2jk8q7EclFh4lLqHBmEaQLNKFGHV6BrBDrgpZTocGFH2ahHK3"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a2a59ea04e4ed-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"id":"user-583e69e4","email":"micheal.tom@example.com","phone":null,"firstName":"Micheal","lastName":"tom","kycStatus":"pending","createdAt":"2026-01-27T17:06:55.200Z","updatedAt":"2026-01-27T18:03:13.154Z"},"meta":{"requestId":"swagger-xyz12345","timestamp":"2026-01-27T18:03:13.511Z","version":"v1"}}
+
+18:03:11.363 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:03:11.373 [main] DEBUG com.intuit.karate - request:
+1 > GET https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-xyz12345
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+
+
+18:03:11.965 [main] DEBUG com.intuit.karate - response time in milliseconds: 590
+1 < 200
+1 < Date: Tue, 27 Jan 2026 18:03:14 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 98
+1 < X-RateLimit-Reset: 1769537053
+1 < X-Request-Id: swagger-xyz12345
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=OCyY9ES6gQCFQoLvCFpTUEe3quUdBeE%2BZVDaWGu3xc2QzR7fXK%2Bmt%2FtRDBaCqDxpFPMSObZweFf5mHCZ83sD6xKS6BPwkIr%2BoEmhsy2gKZkebf5A6475S9JNSdkqt4HSm8PVBTwuwmLQNj%2FIO26WLVvS"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a2a628966789f-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"id":"user-583e69e4","email":"micheal.tom@example.com","phone":null,"firstName":"Micheal","lastName":"tom","kycStatus":"pending","createdAt":"2026-01-27T17:06:55.200Z","updatedAt":"2026-01-27T18:03:13.154Z"},"meta":{"requestId":"swagger-xyz12345","timestamp":"2026-01-27T18:03:14.209Z","version":"v1"}}
+
+18:03:12.004 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:03:12.015 [main] DEBUG com.intuit.karate - request:
+1 > PATCH https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-xyz12345
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 20
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+{"lastName":"Smith"}
+
+18:03:12.939 [main] DEBUG com.intuit.karate - response time in milliseconds: 921
+1 < 200
+1 < Date: Tue, 27 Jan 2026 18:03:15 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 97
+1 < X-RateLimit-Reset: 1769537054
+1 < X-Request-Id: swagger-xyz12345
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=P%2BpBd2FI%2FhYxfk3oAY0pj9S99%2BRfmVNF2Kvu9%2BKVgjCD6pBTcpz55rjQMnETIAL0ZxLe3r6%2BobflZ5fVdWldZSlZVqkSR8ctGZo6qBGdXLxRG5cKRdsDCQPrk7mgsk6zGLZ%2Bh9l1jr%2Fda3UnvFXVjw%3D%3D"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a2a667c31ef3e-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"id":"user-583e69e4","email":"micheal.tom@example.com","phone":null,"firstName":"Micheal","lastName":"Smith","kycStatus":"pending","createdAt":"2026-01-27T17:06:55.200Z","updatedAt":"2026-01-27T18:03:14.832Z"},"meta":{"requestId":"swagger-xyz12345","timestamp":"2026-01-27T18:03:15.182Z","version":"v1"}}
+
+18:03:12.972 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:03:12.982 [main] DEBUG com.intuit.karate - request:
+1 > GET https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-xyz12345
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+
+
+18:03:13.553 [main] DEBUG com.intuit.karate - response time in milliseconds: 568
+1 < 200
+1 < Date: Tue, 27 Jan 2026 18:03:15 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 96
+1 < X-RateLimit-Reset: 1769537055
+1 < X-Request-Id: swagger-xyz12345
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=fN0hO2CNSgvAkdDlaPJsTB1lCij6lioxhrnGWsO2fC3tXXEnHOSbVd2VL8nSTMo8hk2AkzQ6EGX%2FY8WfiqySSrFvnKpOKPbJd%2BzmXQzJwaopqmQPnyvUoz0NYzwK%2BqGcuC2mpQ3ymifdLEHL5EauUg%3D%3D"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a2a6c8c66ef55-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"id":"user-583e69e4","email":"micheal.tom@example.com","phone":null,"firstName":"Micheal","lastName":"Smith","kycStatus":"pending","createdAt":"2026-01-27T17:06:55.200Z","updatedAt":"2026-01-27T18:03:14.832Z"},"meta":{"requestId":"swagger-xyz12345","timestamp":"2026-01-27T18:03:15.798Z","version":"v1"}}
+
+18:04:55.316 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:examples/users/patchApi.feature
+18:04:55.721 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:04:58.032 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:04:58.870 [main] DEBUG com.intuit.karate - request:
+1 > PATCH https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-xyz12345
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 20
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+{"lastName":"Smith"}
+
+18:05:00.223 [main] DEBUG com.intuit.karate - response time in milliseconds: 1346
+1 < 200
+1 < Date: Tue, 27 Jan 2026 18:05:02 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 99
+1 < X-RateLimit-Reset: 1769537161
+1 < X-Request-Id: swagger-xyz12345
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=heVRzl9SVbIHOGuuwX6Soj6ALDbfamUijY%2FU%2BPgEqylDQooHapoXUG7URPs0ZHSTNYd7vEofAOS%2F0y0HJjA%2FEMSTSp%2FyY%2F48c5PIQ2%2FjAHFz%2B0wercQeYVVLd58otVXgkNXDTewsV8dS2pjUQzf0cfRZ"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a2d04aeaeca24-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"id":"user-583e69e4","email":"micheal.tom@example.com","phone":null,"firstName":"Micheal","lastName":"Smith","kycStatus":"pending","createdAt":"2026-01-27T17:06:55.200Z","updatedAt":"2026-01-27T18:05:02.089Z"},"meta":{"requestId":"swagger-xyz12345","timestamp":"2026-01-27T18:05:02.434Z","version":"v1"}}
+
+18:05:00.293 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:05:00.303 [main] DEBUG com.intuit.karate - request:
+1 > GET https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-xyz12345
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+
+
+18:05:00.900 [main] DEBUG com.intuit.karate - response time in milliseconds: 594
+1 < 200
+1 < Date: Tue, 27 Jan 2026 18:05:03 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 98
+1 < X-RateLimit-Reset: 1769537162
+1 < X-Request-Id: swagger-xyz12345
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=BcMZUap4GsD5d0H1ml6DLS87mGvHoSH8XJF1mfa1S74x%2F%2FEEY7omr1GTiIxc5GQleGgb5ANzRR0gc0KGxWCkjS30r7gIV184marAZrV4n8uqmbnxvZm80VIVPxxDi31MKrxtwq8kFqcvQNMXHZ9dAOlP"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a2d0b488c3c70-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"id":"user-583e69e4","email":"micheal.tom@example.com","phone":null,"firstName":"Micheal","lastName":"Smith","kycStatus":"pending","createdAt":"2026-01-27T17:06:55.200Z","updatedAt":"2026-01-27T18:05:02.089Z"},"meta":{"requestId":"swagger-xyz12345","timestamp":"2026-01-27T18:05:03.147Z","version":"v1"}}
+
+18:16:25.698 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:examples/users/deleteApi.featucre
+18:16:26.613 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:16:57.057 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:examples/users/deleteApi.feature
+18:17:40.104 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:examples/users/deleteApi.feature
+18:17:40.515 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:17:42.684 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:17:43.461 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-ig9trzj9c
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+
+
+18:17:45.297 [main] DEBUG com.intuit.karate - response time in milliseconds: 1827
+1 < 200
+1 < Date: Tue, 27 Jan 2026 18:17:47 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 99
+1 < X-RateLimit-Reset: 1769537926
+1 < X-Request-Id: swagger-ig9trzj9c
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=P%2B7a0l7Eo5%2FOVvBk0Oz87Rl1D4RJXUEiwgEk2gEUiIX53c8RaDs9enhAadnLzAV%2FtO6wL%2BC5B3yxyFjedGW8zkTCd1RQ9B2kmsggICAJzKGh3bvpqRRueRHQucl%2BypXxRarV9%2FR1dPJsYB9S00q9gRE3"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a3faf69e39cfb-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"deleted":true,"id":"user-583e69e4"},"meta":{"requestId":"swagger-ig9trzj9c","timestamp":"2026-01-27T18:17:47.520Z","version":"v1"}}
+
+18:17:45.326 [main] ERROR com.intuit.karate - classpath:examples/users/deleteApi.feature:10
+Then status 204
+status code was: 200, expected: 204, response time in milliseconds: 1827, url: https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4, response: 
+{"success":true,"data":{"deleted":true,"id":"user-583e69e4"},"meta":{"requestId":"swagger-ig9trzj9c","timestamp":"2026-01-27T18:17:47.520Z","version":"v1"}}
+classpath:examples/users/deleteApi.feature:10
+18:17:45.387 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:17:45.399 [main] DEBUG com.intuit.karate - request:
+1 > GET https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-ig9trzj9c
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+
+
+18:17:45.984 [main] DEBUG com.intuit.karate - response time in milliseconds: 583
+1 < 404
+1 < Date: Tue, 27 Jan 2026 18:17:48 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 98
+1 < X-RateLimit-Reset: 1769537927
+1 < X-Request-Id: swagger-ig9trzj9c
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=cNT0xNKV879XGR1jP%2BA8o81KQMTvEvfMsb%2F%2BwHRrO9Z376zkVuRk4WnDWgamUDZu%2BYyOTAUmASYigpUlE3N8AiOLftPpCrhrINnCmukVbXfkGSNv5poY8mCNbKUXg4pCvN9bUpy%2BgWWZcA7KeViapu3T"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a3fb938ca45a0-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":false,"error":{"code":"NOT_FOUND","message":"User with ID 'user-583e69e4' not found","traceId":"swagger-ig9trzj9c","timestamp":"2026-01-27T18:17:48.228Z"}}
+
+18:17:46.033 [main] ERROR com.intuit.karate - classpath:examples/users/deleteApi.feature:16
+And match response.message == 'User not found'
+match failed: EQUALS
+  $ | actual path does not exist (STRING:STRING)
+  '#notpresent'
+  'User not found'
+
+classpath:examples/users/deleteApi.feature:16
+18:25:56.403 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:examples/users/deleteApi.feature
+18:25:56.818 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:25:59.128 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:25:59.903 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-ig9trzj9c
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+
+
+18:26:01.282 [main] DEBUG com.intuit.karate - response time in milliseconds: 1368
+1 < 404
+1 < Date: Tue, 27 Jan 2026 18:26:03 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 99
+1 < X-RateLimit-Reset: 1769538422
+1 < X-Request-Id: swagger-ig9trzj9c
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=6YuWd4c5vooJChfxkyaIy%2B4u5%2BOkob9yYeMnBECId84%2FN56PYc5k%2BWRllQIWylttXgff6Vvi4PdiHPTzixbkfS183BshFBJD1WZt5ttUpdXTys0ZG7oJZpQr0ueIuZdtsnbcYO6B1%2FIMrvH%2BkP3Sipot"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a4bce9f32cd14-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":false,"error":{"code":"NOT_FOUND","message":"User with ID 'user-583e69e4' not found","traceId":"swagger-ig9trzj9c","timestamp":"2026-01-27T18:26:03.484Z"}}
+
+18:26:01.308 [main] ERROR com.intuit.karate - classpath:examples/users/deleteApi.feature:10
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 1368, url: https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4, response: 
+{"success":false,"error":{"code":"NOT_FOUND","message":"User with ID 'user-583e69e4' not found","traceId":"swagger-ig9trzj9c","timestamp":"2026-01-27T18:26:03.484Z"}}
+classpath:examples/users/deleteApi.feature:10
+18:26:01.365 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:26:01.373 [main] DEBUG com.intuit.karate - request:
+1 > GET https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-583e69e4
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-ig9trzj9c
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+
+
+18:26:01.958 [main] DEBUG com.intuit.karate - response time in milliseconds: 582
+1 < 404
+1 < Date: Tue, 27 Jan 2026 18:26:04 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 98
+1 < X-RateLimit-Reset: 1769538423
+1 < X-Request-Id: swagger-ig9trzj9c
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=LdFxgZvR%2FZa%2FGk9VGWrVCxxuZ7SjA3sp5LZ6QrwQbZLz8ZGnJBJ2E2ZqXBo9iah7a6zmqjSwYKuwITCOeobCw4DMbL9qCffTIz1COsVylE24hU3vd9v6OoTKlPBGbzjVDbPQy31mBmwpLGKPRL1U6kpg"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a4bd5081fd06a-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":false,"error":{"code":"NOT_FOUND","message":"User with ID 'user-583e69e4' not found","traceId":"swagger-ig9trzj9c","timestamp":"2026-01-27T18:26:04.211Z"}}
+
+18:26:02.002 [main] ERROR com.intuit.karate - classpath:examples/users/deleteApi.feature:16
+And match response.error.message == 'User with ID "user-583e69e4" not found'
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'User with ID 'user-583e69e4' not found'
+  'User with ID "user-583e69e4" not found'
+
+classpath:examples/users/deleteApi.feature:16
+18:29:36.471 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:examples/users/deleteApi.feature
+18:29:36.868 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:29:39.215 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:29:39.938 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-37001823
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-ig9trzj9c
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+
+
+18:29:41.434 [main] DEBUG com.intuit.karate - response time in milliseconds: 1488
+1 < 200
+1 < Date: Tue, 27 Jan 2026 18:29:43 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 99
+1 < X-RateLimit-Reset: 1769538642
+1 < X-Request-Id: swagger-ig9trzj9c
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=qL5g9mYW5N5KN6ObV6ORhuRXxLi%2BbwvVrU%2Bmoe63QbEA40mjMTxvPwzIWkgHAEvrhcEJ8OQP%2BTCcY2%2F38C3TIv%2Bgwa6YCVcyAQNwraoBV6s6KyEHPg2Ul%2Bf1J4i7hZXxi%2BLrLMQq9UHk5bJGX7usuMzt"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a512d6dd2c10d-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"deleted":true,"id":"user-37001823"},"meta":{"requestId":"swagger-ig9trzj9c","timestamp":"2026-01-27T18:29:43.641Z","version":"v1"}}
+
+18:29:41.475 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:29:41.486 [main] DEBUG com.intuit.karate - request:
+1 > GET https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-37001823
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-ig9trzj9c
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+
+
+18:29:42.068 [main] DEBUG com.intuit.karate - response time in milliseconds: 579
+1 < 404
+1 < Date: Tue, 27 Jan 2026 18:29:44 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 98
+1 < X-RateLimit-Reset: 1769538643
+1 < X-Request-Id: swagger-ig9trzj9c
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=aB1%2BnIYqAjzn0CELMwhuVqahcTxt1vvFIQwBiFuYXE4rQM2GZ16wVAMutuNFOFlK5ZA2zPSsW51AfjthowPjPztZKKRrBMHGj9hurUcz%2BRdZIMMgbvqto0QMDQAgKlC9%2F%2F4MZNp1T4KutXail6kZAYCs"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a5134beb9ba87-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":false,"error":{"code":"NOT_FOUND","message":"User with ID 'user-37001823' not found","traceId":"swagger-ig9trzj9c","timestamp":"2026-01-27T18:29:44.324Z"}}
+
+18:29:42.110 [main] ERROR com.intuit.karate - classpath:examples/users/deleteApi.feature:16
+And match response.error.message == 'User with ID "user-37001823" not found'
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'User with ID 'user-37001823' not found'
+  'User with ID "user-37001823" not found'
+
+classpath:examples/users/deleteApi.feature:16
+18:31:20.840 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:examples/users/deleteApi.feature
+18:31:21.295 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:31:23.478 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:31:24.218 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-d54947c3
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-ig9trzj9c
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+
+
+18:31:25.741 [main] DEBUG com.intuit.karate - response time in milliseconds: 1510
+1 < 200
+1 < Date: Tue, 27 Jan 2026 18:31:27 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 99
+1 < X-RateLimit-Reset: 1769538746
+1 < X-Request-Id: swagger-ig9trzj9c
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=70bsg7Y3moaV6%2BdcaCPBdNvLNOq%2F07HXxiO8ag5dDIyoJR%2FiHS0NoSbnmPzWMJCPXLQjj7lAt1nTw6mW5jqxBXQs2ZCuiVlpH%2FwHv%2FItfxGWFdiSPD52SMaz8rLgUjddXuMUEbRJkv1pYotrzf55WaAH"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a53b92ea00014-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":true,"data":{"deleted":true,"id":"user-d54947c3"},"meta":{"requestId":"swagger-ig9trzj9c","timestamp":"2026-01-27T18:31:27.944Z","version":"v1"}}
+
+18:31:25.795 [main] INFO  com.intuit.karate - karate.env system property was: null 
+18:31:25.805 [main] DEBUG com.intuit.karate - request:
+1 > GET https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users/user-d54947c3
+1 > Accept: application/json
+1 > X-API-Key: demo-api-key-123
+1 > X-Request-Id: swagger-ig9trzj9c
+1 > Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > Accept-Encoding: gzip,deflate
+
+
+18:31:26.394 [main] DEBUG com.intuit.karate - response time in milliseconds: 586
+1 < 404
+1 < Date: Tue, 27 Jan 2026 18:31:28 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 < Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 < Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 < Access-Control-Max-Age: 86400
+1 < X-RateLimit-Limit: 100
+1 < X-RateLimit-Remaining: 98
+1 < X-RateLimit-Reset: 1769538748
+1 < X-Request-Id: swagger-ig9trzj9c
+1 < Vary: accept-encoding
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=z2b%2FSO1ZQHVJgmGfUEHmAscxubK14qB0w1Lj085ikPUO7muBfIgZX86pr42GiGrjAlcq99%2Fk0XDvRFOV%2BFxx69Y6KAZXYUE%2BgfxcXp%2Bq9HQE%2Bd8bt2HaNwKLO4K%2BVXxrM60SveIdzvmArkl6OVS4MRlC"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 9c4a53c0cb01cd22-LHR
+1 < alt-svc: h3=":443"; ma=86400
+{"success":false,"error":{"code":"NOT_FOUND","message":"User with ID 'user-d54947c3' not found","traceId":"swagger-ig9trzj9c","timestamp":"2026-01-27T18:31:28.640Z"}}
+

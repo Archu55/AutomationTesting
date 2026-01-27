@@ -1,0 +1,92 @@
+{
+  // Auto Save
+  "files.autoSave": "onWindowChange",
+  "files.autoSaveDelay": 1000,
+
+  // Default Formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Auto Format
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": false,
+
+  // ESLint Integration
+  "eslint.format.enable": false,
+  "eslint.validate": ["javascript"],
+
+  // Better Editing
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // IntelliSense
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // Cucumber
+  "[feature]": {
+    "editor.defaultFormatter": "alexkrechik.cucumberautocomplete"
+  },
+  "[cucumber]": {
+    "editor.semanticHighlighting.enabled": true
+  },
+  "cucumberautocomplete.steps": ["features/step-definitions/**/*.js"],
+  "cucumberautocomplete.syncfeatures": "features/featureFiles/**/*.feature",
+  "cucumberautocomplete.strictGherkinCompletion": true,
+  "cucumberautocomplete.smartSnippets": true,
+  "cucumberautocomplete.onTypeFormat": true,
+
+  "workbench.iconTheme": "vscode-icons",
+  "errorLens.excludeByMessage": ["Incorrect type. Expected \"string\"."],
+  "files.associations": {
+    "*.feature": "feature"
+  },
+
+  // Enable cSpell:
+  "cSpell.enabled": true,
+
+  // Ignore common noise
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/{info,lfs,logs,refs,objects}/**",
+    ".git/{index,*refs,*HEAD}",
+    ".vscode",
+    ".vscode-insiders"
+  ],
+
+  // Ignore words with numbers (testCase1, apiV2)
+  "cSpell.ignoreRegExpList": ["/\\b\\w*\\d+\\w*\\b/"],
+
+  // Case sensitivity
+  "cSpell.caseSensitive": false,
+
+  // Minimum word length to check
+  "cSpell.minWordLength": 4,
+
+  // Allow camelCase & snake_case words
+  "cSpell.allowCompoundWords": true,
+
+  // Performance optimization
+  "cSpell.useGitignore": true,
+
+  // User & project custom words
+  "cSpell.words": [
+    "assertion",
+    "cucumber",
+    "cucumberjs",
+    "feature",
+    "gherkin",
+    "Kumari",
+    "locators",
+    "scenario",
+    "testdata",
+    "testid",
+    "wdio",
+    "WDIOPRACTICE",
+    "webdriverio"
+  ]
+}

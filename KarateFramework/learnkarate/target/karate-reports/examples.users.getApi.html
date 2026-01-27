@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"7fa3f935-b8c8-40ce-9e0f-3037e4b80e81",karate_version:"1.4.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>examples.users.getApi</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2026-01-27 03:50:52 pm</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:8]"><span>[1:8]</span> <span>Get first 10 users details</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">examples/users/getApi.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Sample karate test</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:8]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:8]</span>
+                <span class="scenario-name">Get first 10 users details</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>799</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:8]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:8]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;https://billpay-api.gauravkhurana-practice-api.workers.dev&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">15:50:51.854 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:8]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:8]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header X-API-Key = &#39;demo-api-key-123&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:8]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header X-Request-Id = &#39;swagger-6qsdawl2i&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/v1/users&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>params {page:1,limit:10}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">794</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">15:50:51.869 request:
+1 &gt; GET https://billpay-api.gauravkhurana-practice-api.workers.dev/v1/users?limit=10&amp;page=1
+1 &gt; Accept: application/json
+1 &gt; X-API-Key: demo-api-key-123
+1 &gt; X-Request-Id: swagger-6qsdawl2i
+1 &gt; Host: billpay-api.gauravkhurana-practice-api.workers.dev
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+15:50:52.654 response time in milliseconds: 781
+1 &lt; 200
+1 &lt; Date: Tue, 27 Jan 2026 15:50:55 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Allow-Headers: Content-Type, Authorization, X-API-Key, X-Request-Id, X-Client-Id, Accept, Accept-Language, Origin
+1 &lt; Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS
+1 &lt; Access-Control-Expose-Headers: X-Request-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After, Content-Length
+1 &lt; Access-Control-Max-Age: 86400
+1 &lt; X-RateLimit-Limit: 100
+1 &lt; X-RateLimit-Remaining: 97
+1 &lt; X-RateLimit-Reset: 1769529114
+1 &lt; X-Request-Id: swagger-6qsdawl2i
+1 &lt; Vary: accept-encoding
+1 &lt; Report-To: {&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://a.nel.cloudflare.com/report/v4?s=g69E8W%2BaakaPNKrneuVtExljCXEqLAUYCVimQyw3MvzGicb87Yww636Kz2esKFbF4naBU%2B2jYrD3lo63qaV5h9LjYZBlHQyowX0qbYDFLu4xCXcFMjI2Y0qGBPM%2BsWt3MsP9HvbRHgRZrUBVYPpMVyFh&quot;}]}
+1 &lt; Nel: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;success_fraction&quot;:0.0,&quot;max_age&quot;:604800}
+1 &lt; Server: cloudflare
+1 &lt; CF-RAY: 9c49688d98baedbd-LHR
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;success&quot;:true,&quot;data&quot;:[{&quot;id&quot;:&quot;user-37001823&quot;,&quot;email&quot;:&quot;Archana.Kumari@example.com&quot;,&quot;phone&quot;:null,&quot;firstName&quot;:&quot;Archana&quot;,&quot;lastName&quot;:&quot;Kumari&quot;,&quot;kycStatus&quot;:&quot;pending&quot;,&quot;createdAt&quot;:&quot;2026-01-27T15:50:51.976Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-27T15:50:51.976Z&quot;},{&quot;id&quot;:&quot;user-d54947c3&quot;,&quot;email&quot;:&quot;Andy.wilson@example.com&quot;,&quot;phone&quot;:null,&quot;firstName&quot;:&quot;Andy&quot;,&quot;lastName&quot;:&quot;wilson&quot;,&quot;kycStatus&quot;:&quot;pending&quot;,&quot;createdAt&quot;:&quot;2026-01-26T20:42:00.202Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-26T20:42:00.202Z&quot;},{&quot;id&quot;:&quot;user-365d4dbd&quot;,&quot;email&quot;:&quot;Peter.wilson@example.com&quot;,&quot;phone&quot;:null,&quot;firstName&quot;:&quot;Peter&quot;,&quot;lastName&quot;:&quot;wilson&quot;,&quot;kycStatus&quot;:&quot;pending&quot;,&quot;createdAt&quot;:&quot;2026-01-26T20:37:36.430Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-26T20:37:36.430Z&quot;},{&quot;id&quot;:&quot;user-045cf70d&quot;,&quot;email&quot;:&quot;David.wilson@example.com&quot;,&quot;phone&quot;:null,&quot;firstName&quot;:&quot;David&quot;,&quot;lastName&quot;:&quot;wilson&quot;,&quot;kycStatus&quot;:&quot;pending&quot;,&quot;createdAt&quot;:&quot;2026-01-26T20:33:28.350Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-26T20:33:28.350Z&quot;},{&quot;id&quot;:&quot;user-574e087d&quot;,&quot;email&quot;:&quot;farhan.akhtar@example.com&quot;,&quot;phone&quot;:null,&quot;firstName&quot;:&quot;farhan&quot;,&quot;lastName&quot;:&quot;akhtar&quot;,&quot;kycStatus&quot;:&quot;pending&quot;,&quot;createdAt&quot;:&quot;2026-01-26T20:16:33.857Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-26T20:16:33.857Z&quot;},{&quot;id&quot;:&quot;user-2ac62608&quot;,&quot;email&quot;:&quot;Vikas.Kumar@example.com&quot;,&quot;phone&quot;:null,&quot;firstName&quot;:&quot;Vikas&quot;,&quot;lastName&quot;:&quot;Kumar&quot;,&quot;kycStatus&quot;:&quot;pending&quot;,&quot;createdAt&quot;:&quot;2026-01-26T20:13:04.198Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-26T20:13:04.198Z&quot;},{&quot;id&quot;:&quot;user-bd45fa25&quot;,&quot;email&quot;:&quot;newuser@example.com&quot;,&quot;phone&quot;:null,&quot;firstName&quot;:&quot;john&quot;,&quot;lastName&quot;:&quot;ibrahim&quot;,&quot;kycStatus&quot;:&quot;pending&quot;,&quot;createdAt&quot;:&quot;2026-01-26T19:10:20.832Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-26T19:10:20.832Z&quot;},{&quot;id&quot;:&quot;user-419a187d&quot;,&quot;email&quot;:&quot;biswasjidone@example.com&quot;,&quot;phone&quot;:null,&quot;firstName&quot;:&quot;Biswa&quot;,&quot;lastName&quot;:&quot;Ji&quot;,&quot;kycStatus&quot;:&quot;pending&quot;,&quot;createdAt&quot;:&quot;2026-01-26T15:48:29.680Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-26T15:48:29.680Z&quot;},{&quot;id&quot;:&quot;user-52221335&quot;,&quot;email&quot;:&quot;biswas@example.com&quot;,&quot;phone&quot;:null,&quot;firstName&quot;:&quot;Biswa&quot;,&quot;lastName&quot;:&quot;Ji&quot;,&quot;kycStatus&quot;:&quot;pending&quot;,&quot;createdAt&quot;:&quot;2026-01-26T12:05:13.354Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-26T12:05:13.354Z&quot;},{&quot;id&quot;:&quot;user-8c7ca58f&quot;,&quot;email&quot;:&quot;updated_FOKgjDve75mV@test.com&quot;,&quot;phone&quot;:&quot;+912883932355&quot;,&quot;firstName&quot;:&quot;Ramona&quot;,&quot;lastName&quot;:&quot;Botsford&quot;,&quot;kycStatus&quot;:&quot;verified&quot;,&quot;createdAt&quot;:&quot;2026-01-25T14:48:59.151Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-25T14:49:18.472Z&quot;}],&quot;meta&quot;:{&quot;requestId&quot;:&quot;swagger-6qsdawl2i&quot;,&quot;timestamp&quot;:&quot;2026-01-27T15:50:55.054Z&quot;,&quot;version&quot;:&quot;v1&quot;,&quot;pagination&quot;:{&quot;page&quot;:1,&quot;limit&quot;:10,&quot;total&quot;:135,&quot;totalPages&quot;:14,&quot;hasNext&quot;:true,&quot;hasPrev&quot;:false,&quot;offset&quot;:0}}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
