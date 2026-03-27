@@ -1,5 +1,6 @@
 import allure from 'allure-commandline';
 import dotenv from 'dotenv';
+import { Given, When, Then, Before, After, BeforeAll, AfterAll } from '@wdio/cucumber-framework';
 dotenv.config();
 
 const isCI = !!process.env.CI;
@@ -65,6 +66,7 @@ export const config = {
             '--no-sandbox',
             '--disable-dev-shm-usage',
             '--window-size=1920,1080',
+            '--disable-software-rasterizer',
             ...(isHeadless ? ['--headless=new'] : []),
           ],
         },
@@ -186,6 +188,7 @@ export const config = {
   cucumberOpts: {
     // <string[]> (file/dir) require files before executing features
     require: ['./features/step-definitions/*.js', './support/globalWorldData.js'],
+
     // <boolean> show full backtrace for errors
     backtrace: false,
     // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
@@ -264,6 +267,15 @@ export const config = {
    */
   // before: function (capabilities, specs) {
   // },
+  before: function () {
+    global.Given = Given;
+    global.When = When;
+    global.Then = Then;
+    global.Before = Before;
+    global.After = After;
+    global.BeforeAll = BeforeAll;
+    global.AfterAll = AfterAll;
+  },
   /**
    * Runs before a WebdriverIO command gets executed.
    * @param {string} commandName hook command name

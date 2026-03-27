@@ -88,5 +88,6 @@
     "wdio",
     "WDIOPRACTICE",
     "webdriverio"
-  ]
+  ],
+  "git.ignoreLimitWarning": true
 }
